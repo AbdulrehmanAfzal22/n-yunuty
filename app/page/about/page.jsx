@@ -63,16 +63,23 @@ const AboutSection = () => {
           alt="Right decoration"/>
       </div>
 
-        <h1 
-          className="about-heading"
-          style={{
-            opacity: textOpacity,
-            transition: 'opacity 0.1s ease-out'
-          }}
-        >
-        At Yunuak, we help organizations transform operations <br />through digital innovation, process engineering, and smart <br />technology. We believe every business deserves strategies <br /> that drive efficiency, scalability, and sustainable growth. Our <br /> team blends deep industry expertise with a <br /> forward-thinking approach to streamline supply chains, <br />optimize workflows, and deliver future-ready solutions like <br/>
-         our ERP system YunutyConnect and mobile applications.
-        </h1>
+     <h1 className="about-heading">
+  <span
+    className="about-heading-fill"
+    style={{
+      '--fill-percent': `${scrollProgress * 100}%`
+    }}
+  >
+    At Yunuak, we help organizations transform operations <br />
+    through digital innovation, process engineering, and smart <br />
+    technology. We believe every business deserves strategies <br />
+    that drive efficiency, scalability, and sustainable growth. Our <br />
+    team blends deep industry expertise with a <br />
+    forward-thinking approach to streamline supply chains, <br />
+    optimize workflows, and deliver future-ready solutions like <br/>
+    our ERP system YunutyConnect and mobile applications.
+  </span>
+</h1>
 
         <button className="about-button">
           More About Us

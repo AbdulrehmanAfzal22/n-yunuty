@@ -235,3 +235,17 @@
 .about-button {
   animation-delay: 0.4s;
 }
+
+.about-heading-fill {
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff var(--fill-percent, 0%),
+    #818cf8 var(--fill-percent, 0%),
+    #818cf8 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background 0.1s linear;
+}
