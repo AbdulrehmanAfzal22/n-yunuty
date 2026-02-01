@@ -1,13 +1,13 @@
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 800px;
+  min-height: 100vh; /* Changed from height to min-height */
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to visible */
   color: white;
-  padding-top: 160px; /* increase top space so content is lower */
+  padding-top: 160px;
+  padding-bottom: 80px; /* Added bottom padding for the image */
 }
 
 .hero-bg {
@@ -178,40 +178,73 @@
   transform: translateY(-50%) scale(0.97);
 }
 
-.hero-img {
-  margin-top: 22px;
-  width: 1000px;
-  height: 300px;
-  display: block;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  object-fit: cover;
+/* Hero Image Container */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1200px; /* Control maximum width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (max-width: 480px) {
-  .email-form {
-    height: 58px;
-  }
-  .email-input {
-    font-size: 15px;
-    padding: 0 20px;
-    padding-right: 120px;
-  }
-  .submit-btn {
-    padding: 9px 20px;
-    font-size: 14px;
+/* Hero Image */
+.hero-img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto; /* Changed from fixed 300px to auto */
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-img {
+    max-width: 900px;
   }
 }
 
 @media (max-width: 1024px) {
   .hero {
     min-height: 90vh;
+    padding-bottom: 60px;
   }
+  
   .hero-title {
     font-size: clamp(2.4rem, 7vw, 3.8rem);
   }
+  
   .hero-desc {
     font-size: 1.1rem;
+  }
+  
+  .hero-image {
+    margin-top: 50px;
+  }
+  
+  .hero-img {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-bottom: 40px;
+  }
+  
+  .hero-image {
+    margin-top: 40px;
+  }
+  
+  .hero-img {
+    max-width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
 }
 
@@ -219,7 +252,38 @@
   .hero-subtitle {
     gap: 0.75rem;
   }
+  
   .subtitle-text {
     font-size: 11px;
+  }
+  
+  .hero-image {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-form {
+    height: 58px;
+  }
+  
+  .email-input {
+    font-size: 15px;
+    padding: 0 20px;
+    padding-right: 120px;
+  }
+  
+  .submit-btn {
+    padding: 9px 20px;
+    font-size: 14px;
+  }
+  
+  .hero {
+    padding-bottom: 30px;
+  }
+  
+  .hero-img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 }
