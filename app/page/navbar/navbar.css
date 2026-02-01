@@ -1,0 +1,136 @@
+
+.navbar {
+  width: 100%;
+  padding: 20px 5vw;
+  background: rgb(6 6 32 / 85%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo-image {
+  height: 60px;              
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #cfd4ff;              
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 8px 4px;
+}
+
+.nav-links li a:hover {
+  color: white;
+}
+
+
+.nav-links li a.active {
+  color: white;
+}
+
+.nav-links li a.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 55%;
+    background: linear-gradient(to right, transparent, #5b7cff, #5b7cff, transparent);
+    bottom: 4px;
+    border-radius: 2px;
+}
+
+.nav-links li a.dropdown-toggle:hover::after {
+  content: "▾";
+  margin-left: 4px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.get-started-btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: white;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.get-started-btn:hover {
+  background: #ffffff;
+  border-color: #5b7cff;
+  transform: translateY(-1px);
+  color: black;
+  box-shadow: 0 8px 25px rgba(91, 124, 255, 0.25);
+}
+
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 16px 5vw;
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    order: 3;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .get-started-btn {
+    margin-left: auto;
+    order: 2;
+  }
+
+  .logo-image {
+    height: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    gap: 18px;
+    font-size: 14px;
+  }
+
+  .get-started-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
