@@ -1,8 +1,8 @@
-
+/* Navbar container */
 .navbar {
   width: 100%;
   padding: 20px 5vw;
-  background: rgb(6 6 32 / 85%);
+  background: rgba(6, 6, 32, 0.85);
   position: fixed;
   top: 0;
   left: 0;
@@ -19,13 +19,15 @@
   gap: 40px;
 }
 
+/* Logo */
 .logo-image {
-  height: 60px;              
+  height: 80px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
+/* Nav links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -34,66 +36,57 @@
   margin: 0;
   padding: 0;
 }
-
 .nav-links li a {
   color: #cfd4ff;              
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  transition: color 0.3s ease;
   position: relative;
   padding: 8px 4px;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: white;
+  color:#8C5FFF;
 }
 
-
-.nav-links li a.active {
-  color: white;
+/* Gradient underline */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* at bottom of text */
+  width: 0%;
+  height: 2px; /* line thickness */
+  border-radius: 2px;
+  background: linear-gradient(to right, #c1b3b300, #3d1c91, #8C5FFF, #86848400);
+  transition: width 0.4s ease;
 }
 
+/* Show line on hover or active */
+.nav-links li a:hover::after,
 .nav-links li a.active::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 2px;
-    width: 55%;
-    background: linear-gradient(to right, transparent, #5b7cff, #5b7cff, transparent);
-    bottom: 4px;
-    border-radius: 2px;
+  width: 100%;
 }
-
-.nav-links li a.dropdown-toggle:hover::after {
-  content: "▾";
-  margin-left: 4px;
-  opacity: 0.8;
-  font-size: 14px;
-}
-
+/* Get started button */
 .get-started-btn {
   padding: 12px 28px;
   border-radius: 999px;
   background: white;
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-  font-size: 15px;
+  color: #351c75;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
 
 .get-started-btn:hover {
-  background: #ffffff;
-  border-color: #5b7cff;
   transform: translateY(-1px);
-  color: black;
   box-shadow: 0 8px 25px rgba(91, 124, 255, 0.25);
 }
 
-
+/* Responsive */
 @media (max-width: 992px) {
   .navbar {
     padding: 16px 5vw;

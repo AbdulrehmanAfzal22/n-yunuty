@@ -44,8 +44,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/pages" className="dropdown-toggle">
-              All Pages ▾
+            <Link href="/pages">
+            Privacy Policy
             </Link>
           </li>
         </ul>

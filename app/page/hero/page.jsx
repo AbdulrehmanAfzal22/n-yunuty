@@ -7,6 +7,7 @@ import bg from "../../../public/assests/background.png";
 import right from "../../../public/assests/sub-title-right.svg";
 import left from "../../../public/assests/sub-title-left.svg";
 import image from "../../../public/assests/hero-img.png";
+import future from "../../../public/assests/Future1.svg";
 export default function Hero() {
   const [email, setEmail] = useState("");
 
@@ -42,9 +43,7 @@ export default function Hero() {
               className="no-shrink"
             />
             <div className="sub-text">
-              <Image src={left} className="left-svg" alt="Star Icon" />
-              <p className="subtitle-text">Future-Ready ERP Solution</p>
-              <Image src={right} className="right-svg" alt="Star Icon" />
+              {/* <Image src={future} className="left-svg" alt="Star Icon" /> */}
             </div>
             <Image
               src="/sub-title-right.svg"

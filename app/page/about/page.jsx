@@ -10,6 +10,7 @@ const AboutSection = () => {
   const sectionRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
+
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
@@ -47,7 +48,20 @@ const AboutSection = () => {
   // Calculate opacity based on scroll progress
   // 0.3 (dull) to 1 (bright white)
   const textOpacity = 0.3 + (scrollProgress * 0.7);
-
+ const features = [
+    { id: 1, text: "Inventory Visibility", icon: "🔶" },
+    { id: 2, text: "Customer Portal Access", icon: "✨" },
+    { id: 3, text: "Interconnectivity", icon: "🔷" },
+    { id: 4, text: "Integrated Financial Management", icon: "💚" },
+    { id: 5, text: "Process Automation", icon: "🔹" },
+    { id: 6, text: "Real-Time Analytics & Reporting", icon: "🔻" },
+    { id: 7, text: "Demand Forecasting & Planning", icon: "💛" },
+    { id: 8, text: "Mobile Accessibility", icon: "💜" },
+    { id: 9, text: "Live Quickbooks Connection", icon: "🟠" },
+    { id: 10, text: "Process Automation", icon: "🔷" },
+    { id: 11, text: "Real-Time Analytics & Reporting", icon: "💚" },
+    { id: 12, text: "Online Payment", icon: "💚" }
+  ];
   return (
     <>
     <section className="about-section" ref={sectionRef}>
@@ -107,11 +121,77 @@ const AboutSection = () => {
 
 
     </section>
-    <Image
-        src={acess}
-        alt="About Image"
-        className="acess-img"
-        />
+   <section className="features-tags-section">
+      <div className="features-tags-container">
+        {/* Row 1 */}
+        <div className="tags-row row-1">
+          <div className="feature-tag">
+            <span className="tag-icon orange">🔶</span>
+            <span className="tag-text">Inventory Visibility</span>
+          </div>
+          <div className="feature-tag">
+            <span className="tag-icon green">✨</span>
+            <span className="tag-text">Customer Portal Access</span>
+          </div>
+          <div className="feature-tag">
+            <span className="tag-icon purple">🔷</span>
+            <span className="tag-text">Interconnectivity</span>
+          </div>
+        </div>
+
+        {/* Row 2 */}
+        <div className="tags-row row-2">
+          <div className="feature-tag">
+            <span className="tag-icon green">💚</span>
+            <span className="tag-text">Integrated Financial Management</span>
+          </div>
+          <div className="feature-tag">
+            <span className="tag-icon blue">🔹</span>
+            <span className="tag-text">Process Automation</span>
+          </div>
+        </div>
+
+        {/* Row 3 */}
+        <div className="tags-row row-3">
+          <div className="feature-tag">
+            <span className="tag-icon red">🔻</span>
+            <span className="tag-text">Real-Time Analytics & Reporting</span>
+          </div>
+          <div className="feature-tag">
+            <span className="tag-icon yellow">💛</span>
+            <span className="tag-text">Demand Forecasting & Planning</span>
+          </div>
+        </div>
+
+        {/* Row 4 */}
+        <div className="tags-row row-4">
+          <div className="feature-tag">
+            <span className="tag-icon purple">💜</span>
+            <span className="tag-text">Mobile Accessibility</span>
+          </div>
+          <div className="feature-tag">
+            <span className="tag-icon orange">🟠</span>
+            <span className="tag-text">Live Quickbooks Connection</span>
+          </div>
+          <div className="feature-tag">
+            <span className="tag-icon purple">🔷</span>
+            <span className="tag-text">Process Automation</span>
+          </div>
+        </div>
+
+        {/* Row 5 */}
+        <div className="tags-row row-5">
+          <div className="feature-tag">
+            <span className="tag-icon green">💚</span>
+            <span className="tag-text">Real-Time Analytics & Reporting</span>
+          </div>
+          <div className="feature-tag">
+            <span className="tag-icon green">💚</span>
+            <span className="tag-text">Online Payment</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
         
 </>
