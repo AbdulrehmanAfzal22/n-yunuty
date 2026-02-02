@@ -112,6 +112,8 @@ const AboutSection = () => {
         alt="About Image"
         className="acess-img"
         />
+
+        
 </>
   );
 };
