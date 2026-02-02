@@ -7,7 +7,7 @@ import bg from "../../../public/assests/background.png";
 import right from "../../../public/assests/sub-title-right.svg";
 import left from "../../../public/assests/sub-title-left.svg";
 import image from "../../../public/assests/hero-img.png";
-import future from "../../../public/assests/Future1.svg";
+import future from "../../../public/assests/Future.png";
 export default function Hero() {
   const [email, setEmail] = useState("");
 
@@ -35,23 +35,23 @@ export default function Hero() {
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-subtitle">
-            <Image
+            {/* <Image
               src="/sub-title-left.svg"
               alt=""
               width={79}
               height={17}
               className="no-shrink"
-            />
+            /> */}
             <div className="sub-text">
-              {/* <Image src={future} className="left-svg" alt="Star Icon" /> */}
+              <Image src={future} className="left-svg" alt="Star Icon" />
             </div>
-            <Image
+            {/* <Image
               src="/sub-title-right.svg"
               alt=""
               width={79}
               height={17}
               className="no-shrink"
-            />
+            /> */}
           </div>
 
           <h1 className="hero-title">

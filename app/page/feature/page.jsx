@@ -7,6 +7,9 @@ import right from "../../../public/assests/sub-title-right.svg";
 import left from "../../../public/assests/sub-title-left.svg";
 import mobile from "../../../public/assests/mobile.png";
 import laptop from "../../../public/assests/laptop.png";
+import ten from "../../../public/assests/ten.png";
+import layer from "../../../public/assests/Layer.png";
+import benefit from "../../../public/assests/Benfits.png";
 import "./feature.css";
 function Page() {
 
@@ -166,6 +169,38 @@ function Page() {
     > </div>   </div>
   </div>
 </div>
+
+{/* 
+
+ <div className="benfit">
+ <section className="benefitsSection">
+      <Image
+    src={benefit}
+    alt="Benefits Image"
+    className="benefit-image"
+    />
+      <div className="benefitsContent">
+        <h2 className="benefitsTitle">Your Benefits</h2>
+        <p className="benefitsSubtitle">
+          Harnessing the power of artificial intelligence to revolutionize industries
+          and enhance human experiences.
+        </p>
+      </div>
+<div className="img">
+      <Image
+        src={ten}
+        alt="Benefits Image"
+        className="b1"
+      />
+      <Image
+        src={layer}
+        alt="Benefits Image"
+        className="b2"
+      />
+      </div>
+    </section>
+</div> */}
+
     </>
   )
 }

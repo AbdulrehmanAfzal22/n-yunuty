@@ -10,7 +10,7 @@
     width: 100%;
     height: 1000px;
     position: absolute;
-    top: 3520px;
+    top: 3010px;
 
 }
 
@@ -21,7 +21,7 @@
      background: #05061C;
      width: 100%;
        position: absolute;
-       top: 4500px;
+       top: 4009px;
 }
 .cta-banner {
   position: relative;   /* instead of absolute */
@@ -109,6 +109,11 @@ border-radius: 12px;
 .cta-button:active {
   transform: translateY(0);
   box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Responsive Design */
@@ -276,7 +281,7 @@ border-radius: 12px;
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  top: 4680px
+top: 4155px;
 }
 .slider-card p {
   font-size: 14px;
@@ -336,8 +341,13 @@ border-radius: 12px;
   border: 1px solid rgba(51, 65, 85, 0.5);
   backdrop-filter: blur(12px);
   transition: all 0.3s ease;
+  width: 650px;
+  margin-right: -20px;
 }
-
+.feature-box img {
+    display: flex;
+    justify-content: center;
+}
 .feature-box:hover {
   border-color: rgba(59, 130, 246, 0.5);
   transform: translateY(-4px);
@@ -430,3 +440,5 @@ border-radius: 12px;
   height: auto;
   display: block;
 }
+
+
