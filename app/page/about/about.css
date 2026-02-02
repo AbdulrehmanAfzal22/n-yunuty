@@ -249,3 +249,10 @@
   background-clip: text;
   transition: background 0.1s linear;
 }
+
+.acess-img {
+    width: 100%;
+    height: 958px;
+    position: absolute;
+    top: 1773px;
+}

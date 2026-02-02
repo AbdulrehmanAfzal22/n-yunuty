@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./about.css";
 import Image from "next/image";
-
+import acess from "../../../public/assests/acess.jpg";
 import right from "../../../public/assests/sub-title-right.svg";
 import left from "../../../public/assests/sub-title-left.svg";
 const AboutSection = () => {
@@ -49,6 +49,7 @@ const AboutSection = () => {
   const textOpacity = 0.3 + (scrollProgress * 0.7);
 
   return (
+    <>
     <section className="about-section" ref={sectionRef}>
       <div className="about-container">
       <div className="about">
@@ -103,7 +104,15 @@ const AboutSection = () => {
 
       {/* Background Grid Effect */}
       <div className="grid-background"></div>
+
+
     </section>
+    <Image
+        src={acess}
+        alt="About Image"
+        className="acess-img"
+        />
+</>
   );
 };
 
