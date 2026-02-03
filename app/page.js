@@ -4,6 +4,7 @@ import AboutSection from "./page/about/page.jsx";
 import Feature from "./page/feature/page.jsx";
 import Benefits from "./page/benefits/page.jsx";
 import FeatureGrid from "./page/featuregrid/page.jsx";
+import Indicator from "./page/indicator/page.jsx";
 export default function Home() {
   return (
     <>
@@ -11,8 +12,8 @@ export default function Home() {
       <Hero />
       <AboutSection />
          <Feature/> 
-      
        <FeatureGrid/>
+       <Indicator/>
    
     
     </>

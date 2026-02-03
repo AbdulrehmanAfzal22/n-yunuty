@@ -4,6 +4,7 @@ import Image from 'next/image';
 import helmet from '../../../public/assests/helmet.png';
 import wheel from '../../../public/assests/wheel.png';
 import dashboard from '../../../public/assests/Dashboard.png';
+import twelve from '../../../public/assests/twelve.jpg';
 const FeatureGrid = () => {
   return (
     <div className="grid11">
@@ -154,6 +155,7 @@ const FeatureGrid = () => {
         </button>
       </div>
     </div>
+{/* <Image src={twelve} alt="Twelve" className="twelve-image"/> */}
     </div>
   );
 };
