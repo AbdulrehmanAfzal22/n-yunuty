@@ -77,7 +77,6 @@ const PerformanceDashboard = () => {
           </div>
         </div>
         
-        {/* Bottom Text */}
         <div className="bottom-text">
           <p>Your preferred ERP for stone and marble companies in South Florida</p>
         </div>
