@@ -15,7 +15,7 @@ const FeatureGrid = () => {
         
         
         <div className="feature-card">
-          <div className="card-header">
+          <div className="card-header w3">
             <h3 className="card-title">Innovative Essential Platforms</h3>
             <p className="card-description">
               Explore versatile ERP solution designed to connect operations, people, and data across your entire business. Manage everything from materials to payments with seamless integration.
@@ -70,7 +70,7 @@ const FeatureGrid = () => {
 
         {/* Box 2: Effortless Personalization */}
         <div className="feature-card">
-          <div className="card-header">
+          <div className="card-header w3">
             <h3 className="card-title">Effortless Personalization</h3>
             <p className="card-description">
               Our system adapts to each user's role, showing only what matters most. Get dashboards, insights, and tools that fit your workflow perfectly.
@@ -104,9 +104,9 @@ const FeatureGrid = () => {
             </div>
           </div>
         </div>
-
-        {/* Box 4: Boost Efficiency & Productivity */}
-        <div className="feature-card feature-card-wide">
+  </div>
+      <div className="flex">
+        <div className="feature-card feature-card-wide w1">
           <div className="card-header">
             <h3 className="card-title">Boost Efficiency & Productivity</h3>
             <p className="card-description">
@@ -122,8 +122,11 @@ const FeatureGrid = () => {
           </div>
         </div>
 
-        {/* Box 5: Actionable Insights */}
-        <div className="feature-card feature-card-wide">
+       
+      
+
+    
+        <div className="feature-card1 feature-card-wide w2 ">
           <div className="card-header">
             <h3 className="card-title">Actionable Insights</h3>
             <p className="card-description">
@@ -138,10 +141,8 @@ const FeatureGrid = () => {
             </div>
           </div>
         </div>
-
-      </div>
-
-      {/* Explore More Button */}
+</div>
+     
       <div className="explore-more-container">
         <button className="explore-more-btn">
           Explore More

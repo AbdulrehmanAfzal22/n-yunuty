@@ -6,6 +6,7 @@ import profile1 from '../../../public/assests/man.png';
 import profile2 from '../../../public/assests/man1.png';
 import left from '../../../public/assests/sub-title-left.svg';
 import right from '../../../public/assests/sub-title-right.svg';
+import group from '../../../public/assests/group.png';
 const PerformanceDashboard = () => {
   return (
     <div className="performance-dashboard">
@@ -80,6 +81,9 @@ const PerformanceDashboard = () => {
         <div className="bottom-text">
           <p>Your preferred ERP for stone and marble companies in South Florida</p>
         </div>
+      </div>
+      <div className="group-image">
+        <Image src={group} alt="Group" />
       </div>
     </div>
   );
