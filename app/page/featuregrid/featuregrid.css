@@ -1,8 +1,15 @@
+.grid11 {
+    position: relative;
+    width: 100%;
+    margin-top: 100px; /* Changed from absolute positioning */
+}
+
 .feature-grid-container {
     background: linear-gradient(#0a0e27, #141829, #0a0e27);
-    height: 135vh;
+    min-height: 100vh; /* Changed from fixed height */
     padding: 4rem 2rem;
-    width: 123%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .feature-grid {
@@ -12,19 +19,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 3rem;
-}
-
-/* Responsive layout */
-@media (max-width: 1200px) {
-  .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .feature-grid {
-    grid-template-columns: 1fr;
-  }
+  padding: 0 20px;
 }
 
 /* Feature Cards */
@@ -36,6 +31,7 @@
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  min-height: 400px;
 }
 
 .feature-card:hover {
@@ -44,25 +40,80 @@
   box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
 }
 
-/* Wide cards for bottom row */
-.feature-card-wide {
-  grid-column: span 1;
+/* Desktop Layout - Exact placement as original */
+@media (min-width: 1201px) {
+  /* Box 4 spans 2 columns */
+  .feature-card:nth-child(4) {
+    grid-column: span 2;
+  }
+  
+  /* Box 5 spans 1 column */
+  .feature-card:nth-child(5) {
+    grid-column: span 1;
+  }
 }
 
+/* Tablet Layout (768px - 1200px) */
 @media (min-width: 769px) and (max-width: 1200px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 0 15px;
+  }
+
+  .feature-card {
+    min-height: 380px;
+    padding: 1.75rem;
+  }
+
+  /* Make cards span appropriately */
   .feature-card:nth-child(4),
   .feature-card:nth-child(5) {
     grid-column: span 1;
   }
 }
 
-@media (min-width: 1201px) {
-  .feature-card:nth-child(4) {
-    grid-column: span 2;
+/* Mobile Layout (max 768px) */
+@media (max-width: 768px) {
+  .grid11 {
+    margin-top: 60px;
   }
-  
+
+  .feature-grid-container {
+    padding: 3rem 1rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 0 10px;
+  }
+
+  .feature-card {
+    min-height: 350px;
+    padding: 1.5rem;
+  }
+
+  .feature-card:nth-child(4),
   .feature-card:nth-child(5) {
     grid-column: span 1;
+  }
+}
+
+/* Small Mobile (max 480px) */
+@media (max-width: 480px) {
+  .feature-grid-container {
+    padding: 2rem 0.75rem;
+  }
+
+  .feature-grid {
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .feature-card {
+    min-height: 320px;
+    padding: 1.25rem;
   }
 }
 
@@ -72,7 +123,7 @@
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 1rem 0;
@@ -80,7 +131,7 @@
 }
 
 .card-description {
-  font-size: 0.95rem;
+  font-size: clamp(0.875rem, 1.5vw, 0.95rem);
   color: #94a3b8;
   line-height: 1.6;
   margin: 0;
@@ -101,6 +152,19 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .platform-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-grid {
+    gap: 0.4rem;
+  }
 }
 
 .platform-icon {
@@ -126,7 +190,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  font-size: clamp(0.6rem, 1vw, 0.7rem);
   color: #64748b;
   text-align: center;
   padding: 0.5rem;
@@ -143,7 +207,7 @@
   justify-content: center;
   min-height: 180px;
   color: #64748b;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
   text-align: center;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -167,25 +231,41 @@
 
 .image-placeholder.circular {
   border-radius: 1rem;
-  min-height: 200px;
+  min-height: clamp(160px, 20vw, 200px);
 }
 
 .image-placeholder.ideas {
-  min-height: 160px;
+  min-height: clamp(140px, 18vw, 160px);
   background: linear-gradient(135deg, rgba(30, 35, 60, 0.5), rgba(40, 30, 80, 0.3));
 }
 
 .image-placeholder.dashboard {
-  min-height: 200px;
+  min-height: clamp(160px, 20vw, 200px);
   background: linear-gradient(135deg, rgba(30, 35, 60, 0.5), rgba(20, 40, 70, 0.3));
 }
 
 .image-placeholder.insights {
-  min-height: 200px;
+  min-height: clamp(160px, 20vw, 200px);
   background: linear-gradient(135deg, rgba(30, 35, 60, 0.5), rgba(40, 30, 80, 0.3));
 }
 
-/* When you add real images, use these classes */
+/* Real Images */
+.dashboard-image,
+.insight-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-image,
+  .insight-image {
+    max-height: 200px;
+  }
+}
+
 .real-image-container {
   width: 100%;
   border-radius: 1rem;
@@ -202,6 +282,7 @@
 .explore-more-container {
   text-align: center;
   margin-top: 3rem;
+  padding: 0 20px;
 }
 
 .explore-more-btn {
@@ -213,7 +294,7 @@
   color: #ffffff;
   border: 2px solid rgba(99, 102, 241, 0.5);
   border-radius: 2rem;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -227,14 +308,40 @@
   box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
 }
 
+.explore-more-btn:active {
+  transform: translateY(0);
+}
+
 .arrow-icon {
   width: 1.25rem;
   height: 1.25rem;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .explore-more-btn:hover .arrow-icon {
   transform: translateX(4px);
+}
+
+/* Mobile Button Adjustments */
+@media (max-width: 768px) {
+  .explore-more-btn {
+    padding: 0.875rem 2rem;
+    gap: 0.5rem;
+  }
+
+  .arrow-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-more-btn {
+    padding: 0.75rem 1.75rem;
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 /* Platform icon specific styling for images */
@@ -244,8 +351,57 @@
   object-fit: contain;
 }
 
-.grid11{
-    position: absolute;
-    top: 4900px;
-    height: 100vh;
+/* Ensure images scale properly on all devices */
+@media (max-width: 1200px) {
+  .dashboard-image,
+  .insight-image {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-image,
+  .insight-image {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-image,
+  .insight-image {
+    max-height: 180px;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 360px) {
+  .feature-card {
+    padding: 1rem;
+    min-height: 300px;
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-description {
+    font-size: 0.8125rem;
+  }
+
+  .platform-grid {
+    gap: 0.3rem;
+  }
+}
+
+/* Ensure smooth transitions on all breakpoints */
+* {
+  box-sizing: border-box;
+}
+
+.feature-grid,
+.feature-card,
+.platform-grid,
+.image-placeholder {
+  transition: all 0.3s ease;
 }

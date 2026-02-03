@@ -7,11 +7,14 @@ import FeatureGrid from "./page/featuregrid/page.jsx";
 export default function Home() {
   return (
     <>
-      <Navbar />
+     <Navbar />
       <Hero />
       <AboutSection />
-      <Feature/>
-      <FeatureGrid/>
+         <Feature/> 
+      
+       <FeatureGrid/>
+   
+    
     </>
   );
 }

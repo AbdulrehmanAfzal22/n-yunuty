@@ -55,7 +55,7 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-title">
-            The Future of Supply Chain Digital Transformation
+            The Future of Supply Chain <br /> Digital Transformation
           </h1>
 
           <p className="hero-desc">

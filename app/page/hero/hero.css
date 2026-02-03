@@ -1,13 +1,15 @@
 .hero {
   position: relative;
-  min-height: 100vh; /* Changed from height to min-height */
+  min-height: 100vh;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  overflow: visible; /* Changed from hidden to visible */
+  overflow: visible;
   color: white;
   padding-top: 160px;
-  padding-bottom: 80px; /* Added bottom padding for the image */
+  padding-bottom: 80px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .hero-bg {
@@ -43,11 +45,13 @@
   max-width: 1400px;
   padding: 0 5vw;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .hero-content {
   max-width: 900px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .hero-subtitle {
@@ -56,6 +60,7 @@
   justify-content: center;
   gap: 1.25rem;
   margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .no-shrink {
@@ -65,6 +70,8 @@
 .sub-text {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .subtitle-text {
@@ -72,27 +79,29 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: clamp(11px, 2vw, 13px);
 }
 
 .hero-title {
   text-shadow: 0 4px 12px #0009;
   margin-bottom: 1.5rem;
   font-family: Poppins, sans-serif;
-  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+  font-size: clamp(2rem, 6.5vw, 4.8rem);
   font-weight: 500;
   line-height: 1.12;
-  width: 108%;
+  width: 100%;
+  padding: 0 10px;
 }
 
 .hero-desc {
   font-family: "Poppins", sans-serif;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.25rem);
   line-height: 1.6;
   color: #e0e7ff;
   max-width: 720px;
   margin: 0 auto 2.5rem;
   opacity: 0.95;
+  padding: 0 10px;
 }
 
 .email-wrapper {
@@ -101,6 +110,7 @@
   max-width: 540px;
   margin: 0 auto;
   padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .email-wrapper::before {
@@ -145,6 +155,7 @@
   font-size: 16px;
   outline: none;
   caret-color: #c084fc;
+  box-sizing: border-box;
 }
 
 .email-input::placeholder {
@@ -179,6 +190,11 @@
   transform: translateY(-50%) scale(0.97);
 }
 
+/* Utility class */
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 /* Hero Image Container */
 .hero-image {
   display: flex;
@@ -186,60 +202,119 @@
   align-items: center;
   margin-top: 60px;
   width: 100%;
-  max-width: 1200px; /* Control maximum width */
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Hero Image */
 .hero-img {
   width: 100%;
   max-width: 1000px;
-  height: auto; /* Changed from fixed 300px to auto */
+  height: auto;
   display: block;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Left SVG - Fixed positioning */
+.left-svg {
+  position: absolute;
+  top: -189px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  width: clamp(200px, 30vw, 400px);
+  max-width: 100%;
+  z-index: 5;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1400px) {
+  .left-svg {
+    top: -120px;
+    width: clamp(180px, 25vw, 350px);
+  }
+}
+
 @media (max-width: 1200px) {
+  .hero {
+    padding-top: 140px;
+  }
+
   .hero-img {
     max-width: 900px;
+  }
+
+  .left-svg {
+    top: -100px;
+    width: clamp(160px, 25vw, 300px);
   }
 }
 
 @media (max-width: 1024px) {
   .hero {
     min-height: 90vh;
+    padding-top: 120px;
     padding-bottom: 60px;
   }
   
   .hero-title {
-    font-size: clamp(2.4rem, 7vw, 3.8rem);
+    font-size: clamp(1.8rem, 7vw, 3.8rem);
+    width: 100%;
   }
   
   .hero-desc {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
   }
   
   .hero-image {
     margin-top: 50px;
+    padding: 0 15px;
   }
   
   .hero-img {
     max-width: 800px;
   }
+
+  .left-svg {
+    top: -80px;
+    width: clamp(140px, 22vw, 250px);
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
+    padding-top: 100px;
     padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  .hero-container {
+    padding: 0 4vw;
+  }
+  
+  .hero-title {
+    margin-bottom: 1.2rem;
+    padding: 0 8px;
+  }
+
+  .hero-desc {
+    margin-bottom: 2rem;
+    padding: 0 8px;
+  }
+
+  .email-wrapper {
+    padding: 0 12px;
   }
   
   .hero-image {
     margin-top: 40px;
+    padding: 0 10px;
   }
   
   .hero-img {
@@ -247,23 +322,81 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
+
+  .left-svg {
+    top: -60px;
+    width: clamp(120px, 20vw, 200px);
+  }
 }
 
 @media (max-width: 640px) {
+  .hero {
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+
   .hero-subtitle {
     gap: 0.75rem;
+    margin-bottom: 1.2rem;
   }
   
   .subtitle-text {
     font-size: 11px;
   }
+
+  .hero-title {
+    margin-bottom: 1rem;
+  }
+
+  .hero-desc {
+    margin-bottom: 1.8rem;
+  }
   
   .hero-image {
     margin-top: 30px;
+    padding: 0 8px;
+  }
+
+  .email-form {
+    height: 60px;
+  }
+
+  .email-input {
+    padding-right: 130px;
+  }
+
+  .submit-btn {
+    padding: 10px 24px;
+  }
+
+  .left-svg {
+    top: -50px;
+    width: clamp(100px, 18vw, 180px);
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 25px;
+  }
+
+  .hero-container {
+    padding: 0 3vw;
+  }
+
+  .hero-title {
+    padding: 0 5px;
+  }
+
+  .hero-desc {
+    padding: 0 5px;
+  }
+
+  .email-wrapper {
+    padding: 0 8px;
+  }
+
   .email-form {
     height: 58px;
   }
@@ -279,20 +412,95 @@
     font-size: 14px;
   }
   
-  .hero {
-    padding-bottom: 30px;
+  .hero-image {
+    margin-top: 25px;
+    padding: 0 5px;
   }
   
   .hero-img {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
   }
+
+  .left-svg {
+    top: -40px;
+    width: clamp(80px, 15vw, 150px);
+  }
 }
 
-.left-svg{
-  position: absolute;
-  top: -300px;
-  left: 420px;
-  height: 600px;
-  width: auto;
+@media (max-width: 360px) {
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-desc {
+    margin-bottom: 1.5rem;
+  }
+
+  .email-form {
+    height: 56px;
+  }
+
+  .email-input {
+    font-size: 14px;
+    padding: 0 16px;
+    padding-right: 110px;
+  }
+
+  .submit-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+
+  .left-svg {
+    top: -35px;
+    width: 70px;
+  }
+}
+
+/* Smooth transitions */
+* {
+  box-sizing: border-box;
+}
+
+.email-form,
+.submit-btn {
+  transition: all 0.3s ease;
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .email-form:hover {
+    transform: none;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-50%);
+  }
+}
+
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+}
+
+.hero,
+.hero-container,
+.hero-content {
+  max-width: 100%;
+  overflow-x: hidden;
 }
