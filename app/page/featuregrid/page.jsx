@@ -5,6 +5,8 @@ import helmet from '../../../public/assests/helmet.png';
 import wheel from '../../../public/assests/wheel.png';
 import dashboard from '../../../public/assests/Dashboard.png';
 import twelve from '../../../public/assests/twelve.jpg';
+import write from '../../../public/assests/write.png';
+import effort from '../../../public/assests/effort.png';
 const FeatureGrid = () => {
   return (
     <div className="grid11">
@@ -25,7 +27,6 @@ const FeatureGrid = () => {
             <div className="platform-grid">
               <div className="platform-icon">
                 <div className="icon-placeholder">
-                  <span>Icon 1</span>
                 </div>
               </div>
               <div className="platform-icon">
@@ -79,9 +80,7 @@ const FeatureGrid = () => {
           <div className="card-content">
             {/* Image placeholder - Circular visualization */}
             <div className="visualization-container">
-              <div className="image-placeholder circular">
-                <span>Circular Chart Image</span>
-              </div>
+             <Image src={effort} alt="Effort" className="visualization-image"/>
             </div>
           </div>
         </div>
@@ -98,9 +97,10 @@ const FeatureGrid = () => {
           <div className="card-content">
             {/* Image placeholder - Ideas list */}
             <div className="ideas-container">
-              <div className="image-placeholder ideas">
-                <span>Ideas List Image</span>
-              </div>
+              {/* <div className="image-placeholder ideas"> */}
+                {/* <span>Ideas List Image</span> */}
+              {/* </div> */}
+              <Image src={write} alt="Write" className="ideas-image"/>
             </div>
           </div>
         </div>
@@ -117,9 +117,7 @@ const FeatureGrid = () => {
           <div className="card-content">
             {/* Image placeholder - Dashboard with metrics */}
             <div className="dashboard-container">
-              <div className="image-placeholder dashboard">
               <Image src={wheel} alt="Wheel" className="dashboard-image"/>
-              </div>
             </div>
           </div>
         </div>
@@ -136,9 +134,7 @@ const FeatureGrid = () => {
           <div className="card-content">
             {/* Image placeholder - User card/profile */}
             <div className="insights-container">
-              <div className="image-placeholder insights">
                 <Image src={helmet} alt="Helmet" className="insight-image"/>
-              </div>
             </div>
           </div>
         </div>

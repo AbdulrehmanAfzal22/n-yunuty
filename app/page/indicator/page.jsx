@@ -3,6 +3,9 @@ import React from 'react';
 import './indicator.css';
 import Image from 'next/image';
 import profile1 from '../../../public/assests/man.png';
+import profile2 from '../../../public/assests/man1.png';
+import left from '../../../public/assests/sub-title-left.svg';
+import right from '../../../public/assests/sub-title-right.svg';
 const PerformanceDashboard = () => {
   return (
     <div className="performance-dashboard">
@@ -14,21 +17,21 @@ const PerformanceDashboard = () => {
           {/* Left Section */}
           <div className="left-section">
             <div className="indicator-badge">
-              <span className="indicator-dot"></span>
-              Indicator
-              <span className="indicator-dot"></span>
+             <Image src={left} alt="Left Decoration" className="decoration-img" />
+            <span className="text">  Indicator</span>
+              <Image src={right} alt="Right Decoration" className="decoration-img" />
             </div>
             
-            <h1 className="main-heading">
+            <p className="main-heading">
               We are proud to have<br />
               strong<br />
               <span className="highlight">Performance indicators.</span>
-            </h1>
+            </p>
             
             <div className="rating-section">
               <div className="profile-images">
                 <Image src={profile1} alt="Profile 1" className="profile-img" />
-                <img src="/api/placeholder/32/32" alt="Profile 2" className="profile-img" />
+                <Image src={profile2} alt="Profile 2" className="profile-img" />
               </div>
               <div className="rating-info">
                 <div className="stars">
@@ -47,27 +50,27 @@ const PerformanceDashboard = () => {
           <div className="right-section">
             <div className="metrics-grid">
               <div className="metric-card blue">
-                <h2 className="metric-value">11.5M+</h2>
+                <p className="metric-value">11.5M+</p>
                 <p className="metric-label">Clients Revenue</p>
               </div>
               
               <div className="metric-card light-blue">
-                <h2 className="metric-value">21.9M+</h2>
+                <p className="metric-value">21.9M+</p>
                 <p className="metric-label">Profit Increase</p>
               </div>
               
               <div className="metric-card pink">
-                <h2 className="metric-value">21.9M+</h2>
+                <p className="metric-value">21.9M+</p>
                 <p className="metric-label">Transactions Recorded</p>
               </div>
               
               <div className="metric-card purple">
-                <h2 className="metric-value">300+</h2>
+                <p className="metric-value">300+</p>
                 <p className="metric-label">Cost Reduction</p>
               </div>
               
               <div className="metric-card purple-pink full-width">
-                <h2 className="metric-value">300+</h2>
+                <p className="metric-value">300+</p>
                 <p className="metric-label">Revenue Increase</p>
               </div>
             </div>

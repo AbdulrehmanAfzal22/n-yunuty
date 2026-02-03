@@ -6,7 +6,7 @@
 }
 
 .feature-grid-container {
-    background: linear-gradient(#0a0e27, #141829, #0a0e27);
+   background-color: #05061c;
     min-height: 100vh;
     padding: 4rem 2rem;
     width: 100%;

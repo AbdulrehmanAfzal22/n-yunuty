@@ -124,72 +124,7 @@ const AboutSection = () => {
    <section className="features-tags-section">
       <div className="features-tags-container">
         {/* Row 1 */}
-        <div className="tags-row row-1">
-          <div className="feature-tag">
-            <span className="tag-icon orange">🔶</span>
-            <span className="tag-text">Inventory Visibility</span>
-          </div>
-          <div className="feature-tag">
-            <span className="tag-icon green">✨</span>
-            <span className="tag-text">Customer Portal Access</span>
-          </div>
-          <div className="feature-tag">
-            <span className="tag-icon purple">🔷</span>
-            <span className="tag-text">Interconnectivity</span>
-          </div>
-        </div>
-
-        {/* Row 2 */}
-        <div className="tags-row row-2">
-          <div className="feature-tag">
-            <span className="tag-icon green">💚</span>
-            <span className="tag-text">Integrated Financial Management</span>
-          </div>
-          <div className="feature-tag">
-            <span className="tag-icon blue">🔹</span>
-            <span className="tag-text">Process Automation</span>
-          </div>
-        </div>
-
-        {/* Row 3 */}
-        <div className="tags-row row-3">
-          <div className="feature-tag">
-            <span className="tag-icon red">🔻</span>
-            <span className="tag-text">Real-Time Analytics & Reporting</span>
-          </div>
-          <div className="feature-tag">
-            <span className="tag-icon yellow">💛</span>
-            <span className="tag-text">Demand Forecasting & Planning</span>
-          </div>
-        </div>
-
-        {/* Row 4 */}
-        <div className="tags-row row-4">
-          <div className="feature-tag">
-            <span className="tag-icon purple">💜</span>
-            <span className="tag-text">Mobile Accessibility</span>
-          </div>
-          <div className="feature-tag">
-            <span className="tag-icon orange">🟠</span>
-            <span className="tag-text">Live Quickbooks Connection</span>
-          </div>
-          <div className="feature-tag">
-            <span className="tag-icon purple">🔷</span>
-            <span className="tag-text">Process Automation</span>
-          </div>
-        </div>
-
-        {/* Row 5 */}
-        <div className="tags-row row-5">
-          <div className="feature-tag">
-            <span className="tag-icon green">💚</span>
-            <span className="tag-text">Real-Time Analytics & Reporting</span>
-          </div>
-          <div className="feature-tag">
-            <span className="tag-icon green">💚</span>
-            <span className="tag-text">Online Payment</span>
-          </div>
-        </div>
+<div className="tags-row row-1">  <div className="feature-tag">    <span className="tag-icon orange">🔶</span>    <span className="tag-text">Inventory Visibility</span>  </div>  <div className="feature-tag">    <span className="tag-icon green">🔶</span>    <span className="tag-text">Customer Portal Access</span>  </div>  <div className="feature-tag">    <span className="tag-icon purple">🔶</span>    <span className="tag-text">Interconnectivity</span>  </div></div>{/* Row 2 */}<div className="tags-row row-2">  <div className="feature-tag">    <span className="tag-icon green">🔶</span>    <span className="tag-text">Integrated Financial Management</span>  </div>  <div className="feature-tag">    <span className="tag-icon blue">🔶</span>    <span className="tag-text">Process Automation</span>  </div></div>{/* Row 3 */}<div className="tags-row row-3">  <div className="feature-tag">    <span className="tag-icon red">🔶</span>    <span className="tag-text">Real-Time Analytics & Reporting</span>  </div>  <div className="feature-tag">    <span className="tag-icon yellow">🔶</span>    <span className="tag-text">Demand Forecasting & Planning</span>  </div></div>{/* Row 4 */}<div className="tags-row row-4">  <div className="feature-tag">    <span className="tag-icon purple">🔶</span>    <span className="tag-text">Mobile Accessibility</span>  </div>  <div className="feature-tag">    <span className="tag-icon orange">🔶</span>    <span className="tag-text">Live Quickbooks Connection</span>  </div>  <div className="feature-tag">    <span className="tag-icon purple">🔶</span>    <span className="tag-text">Process Automation</span>  </div></div>{/* Row 5 */}<div className="tags-row row-5">  <div className="feature-tag">    <span className="tag-icon green">🔶</span>    <span className="tag-text">Real-Time Analytics & Reporting</span>  </div>  <div className="feature-tag">    <span className="tag-icon green">🔶</span>    <span className="tag-text">Online Payment</span>  </div></div>
       </div>
     </section>
 
